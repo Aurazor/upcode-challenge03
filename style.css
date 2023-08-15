@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@200;300;400;500;600&display=swap');
+
+:root {
+    --gray-color: #e6dede;
+    --main-font: 'Source Sans 3', sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color:  black;
+    font-family: var(--main-font);
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    /* display: flex;
+    justify-content: center; 
+    align-items: center; */
+    display: grid;
+    place-items: center;
+}
+
+.login-box {
+    width: 70vw;
+    height: 80vh;
+    background-color: white;
+    color: white;
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+}
+
+.testimony-box {
+    background-color: blue;
+    background-image: linear-gradient(to bottom, rgb(137 137 137 / 52%), rgb(9 29 87 / 73%)), url("https://images.unsplash.com/photo-1682685797857-97de838c192e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 27px;
+    position: relative;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.author-box {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 18px;
+}
+
+.sign-up-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 25px;
+    color: black;
+}
+
+.sign-up-header {
+    margin-bottom: 40px;
+}
+
+.sign-up-input-fields {
+    margin-bottom: 20px;
+}
+
+.sign-up-input-fields input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid var(--gray-color);
+    transition: 0.5s ease;
+    font-family: var(--main-font);
+    outline: 1px solid transparent;
+}
+
+
+.sign-up-input-fields input:focus {
+    outline: 1px solid #3838ff;
+}
+
+.sign-up-buttons {
+    width: 100%;
+}
+
+.sign-up-buttons button{
+    font-family: var(--main-font);
+    display: block;
+    width: 100%;
+    margin-bottom: 17px;
+    padding: 10px;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.sign-up-buttons button:hover {
+    /* background-color: red; */
+    transform: scale(1.1);
+}
+
+.sign-up-buttons a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+}
+
+.transparent-button {
+    background: transparent;
+    border: 1px solid var(--gray-color);
+}
+
+.dark-button {
+    background-color: black;
+    color: white;
+    border: none;
+}
+
+
+input, button {
+    border-radius: 20px;
+}
+
+@media screen and (max-width: 1024px) {
+
+    .login-box {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    
+}
+
+@media screen and (max-width: 760px) {
+
+    .login-box {
+        height: 75vh;
+        grid-template-columns: 1fr;
+    }
+
+    .testimony-box {
+        display: none;
+    }
+
+    .sign-up-form {
+        border-top: 15px solid #3838ff;
+        padding: 50px;
+    }
+}
