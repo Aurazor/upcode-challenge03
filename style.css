@@ -181,6 +181,7 @@ input, button {
     .login-box {
         height: 75vh;
         grid-template-columns: 1fr;
+        border-radius: 20px;
     }
 
     .testimony-box {
@@ -188,7 +189,6 @@ input, button {
     }
 
     .sign-up-form {
-        border-top: 15px solid #3838ff;
         padding: 50px;
     }
 }
